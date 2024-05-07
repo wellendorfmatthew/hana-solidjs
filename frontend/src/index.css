@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fontSize-Hana: 64px;
+  --fontSize-SectionTitle: 24px;
+  --fontSize-Button: 20px;
+  --fontSize-Label: 16px;
+  --topGradient: #0C0A09;
+  --bottomGradient: #262423;
+  --purple: #8C5AD9,
+  --white: #FFFFFF,
+  --gray: #D9D9D9
+  --fontFamily-Hana: Recoleta
+}
+
+@font-face {
+  font-family: Recoleta;
+  src: url('/hana/frontend/src/assets/Recoleta-RegularDEMO.otf') format('truetype');
+}
+
+.background {
+  background: linear-gradient(var(--topGradient), var(--bottomGradient));
+}
+
+.hana-font {
+  font-family: "Recoleta", sans-serif;
+  font-size: var(--fontSize-Hana);
+}
+
+.dm-sans-font {
+  font-family: "DM Sans", sans-serif;
+}
