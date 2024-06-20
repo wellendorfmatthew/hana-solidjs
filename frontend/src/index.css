@@ -30,19 +30,23 @@
 
 @layer components {
   .btn-primary {
-    @apply btn-base bg-btn-primary;
+    @apply btn-base bg-btn-bg-primary;
   }
 
   .btn-secondary {
-    @apply btn-base bg-btn-secondary;
+    @apply btn-base bg-btn-bg-secondary;
+  }
+
+  .btn-disabled {
+    @apply btn-base bg-btn-bg-disabled;
   }
 
   .hana-title {
-    @apply text-6xl font-hana-logo text-btn-primary;
+    @apply text-6xl font-hana-logo text-btn-bg-primary;
   }
 
   .otp-input {
-    @apply w-[50px] border-none border-b-[3px] border-hana-bg mx-2 text-center text-2xl pointer-events-none cursor-not-allowed rounded-md p-5;
+    @apply w-[60px] border-none border-b-[3px] border-hana-bg mx-2 text-center text-2xl pointer-events-none cursor-not-allowed rounded-md p-5 first-of-type:cursor-pointer first-of-type:pointer-events-auto;
   }
 
   .section-container {
