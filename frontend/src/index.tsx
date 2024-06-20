@@ -7,6 +7,7 @@ import App from './pages/App';
 import PhoneNumber from './pages/Phonenumber';
 import OTP from './pages/OTP';
 import SignUp from './pages/SignUp';
+import Homepage from './pages/Homepage';
 
 const root = document.getElementById('root');
 
@@ -17,6 +18,7 @@ render(
             <Route path={"/phonenumber"} component={PhoneNumber} />
             <Route path={"/otp"} component={OTP} />
             <Route path={"/sign-up"} component={SignUp} />
+            <Route path={"/homepage"} component={Homepage} />
         </Router>
     ),
      root!
