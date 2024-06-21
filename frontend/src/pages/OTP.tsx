@@ -1,6 +1,8 @@
+import { useNavigate } from '@solidjs/router';
 import { createSignal, onMount } from 'solid-js';
 
 export default function OTP() {
+  const navigate = useNavigate();
   const [otp, setOtp] = createSignal(["", "", "", ""]);
 
   const handleInput = (index: number, value: any) => {
@@ -44,17 +46,52 @@ export default function OTP() {
   });
 
   return (
-    <div class='background flex flex-col w-screen h-screen items-center justify-center gap-32'>
-      <p class='section-title'>Enter OTP</p>
-      <div class='inputs' id='inputs'>
-        <input type="text" class='input' inputMode='numeric' maxlength={1} value={otp()[0]} onInput={(e) => handleInput(0, e.currentTarget.value)} onKeyUp={(e) => handleKeyup(0, e)}/>
-        <input type="text" class='input' inputMode='numeric' maxlength={1} value={otp()[1]} onInput={(e) => handleInput(1, e.currentTarget.value)} onKeyUp={(e) => handleKeyup(1, e)}/>
-        <input type="text" class='input' inputMode='numeric' maxlength={1} value={otp()[2]} onInput={(e) => handleInput(2, e.currentTarget.value)} onKeyUp={(e) => handleKeyup(2, e)}/>
-        <input type="text" class='input' inputMode='numeric' maxlength={1} value={otp()[3]} onInput={(e) => handleInput(3, e.currentTarget.value)} onKeyUp={(e) => handleKeyup(3, e)}/>
+    <div class="section-container gap-32">
+      <p class="section-title">Enter OTP</p>
+      <div class="inputs" id="inputs">
+        <input
+          type="text"
+          class="otp-input"
+          inputMode="numeric"
+          maxlength={1}
+          value={otp()[0]}
+          onInput={(e) => handleInput(0, e.currentTarget.value)}
+          onKeyUp={(e) => handleKeyup(0, e)}
+        />
+        <input
+          type="text"
+          class="otp-input"
+          inputMode="numeric"
+          maxlength={1}
+          value={otp()[1]}
+          onInput={(e) => handleInput(1, e.currentTarget.value)}
+          onKeyUp={(e) => handleKeyup(1, e)}
+        />
+        <input
+          type="text"
+          class="otp-input"
+          inputMode="numeric"
+          maxlength={1}
+          value={otp()[2]}
+          onInput={(e) => handleInput(2, e.currentTarget.value)}
+          onKeyUp={(e) => handleKeyup(2, e)}
+        />
+        <input
+          type="text"
+          class="otp-input"
+          inputMode="numeric"
+          maxlength={1}
+          value={otp()[3]}
+          onInput={(e) => handleInput(3, e.currentTarget.value)}
+          onKeyUp={(e) => handleKeyup(3, e)}
+        />
       </div>
-      <button class='bg-purple-700 rounded-full h-[70px] w-[200px] dm-sans-font button-style'>
+      <button
+        onClick={() => navigate("/sign-up")}
+        class="btn-primary"
+      >
         Continue
       </button>
     </div>
-  )
+  );
 }
