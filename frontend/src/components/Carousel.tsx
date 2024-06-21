@@ -1,6 +1,7 @@
 import createEmblaCarousel from "embla-carousel-solid";
 import { createSignal, onMount } from "solid-js";
 import { ArrowLeft, ArrowRight } from "./ui/Icons";
+
 interface slide {
   alt: string;
   text: string;
@@ -14,7 +15,6 @@ interface slides {
 export function Carousel({ slides }: slides) {
   const [emblaRef, emblaApi] = createEmblaCarousel();
   const [activeIndex, setActiveIndex] = createSignal(0);
-
 
   onMount(() => {
     const api = emblaApi();
@@ -46,14 +46,14 @@ export function Carousel({ slides }: slides) {
     <div class="embla h-[97%] w-[90%]" ref={emblaRef}>
       <div class="embla__container">
         {slides.map((slide) => (
-          <div class="embla__slide flex flex-col gap-6">
+          <div class="embla__slide flex flex-col gap-6 justify-evenly items-center">
             <p class="font-hana-text text-white text-4xl text-balance">
               {slide.text}
             </p>
             <img
               src={slide.image}
               alt={slide.alt}
-              class="rounded-lg mx-auto w-[55%] h-[580px] object-cover md:h-[530]"
+              class="embla__image rounded-lg h-[60vh] bigPhone:h-[70vh] max-w-[85%] object-cover"
             />
           </div>
         ))}
@@ -65,9 +65,7 @@ export function Carousel({ slides }: slides) {
         <div>
           {slides.map((_, index) => (
             <button
-              class={`embla__dot ${
-                activeIndex() === index ? "active" : ""
-              }`}
+              class={`embla__dot ${activeIndex() === index ? "active" : ""}`}
               onClick={() => emblaApi()?.scrollTo(index)}
             ></button>
           ))}

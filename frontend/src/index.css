@@ -28,15 +28,15 @@
   }
 
   .embla {
-    @apply overflow-hidden m-4 text-center flex flex-col justify-between;
+    @apply overflow-hidden m-4 text-center flex flex-col justify-normal gap-5 max-h-screen;
   }
 
   .embla__container {
-    @apply flex;
+    @apply flex h-full justify-evenly;
   }
 
   .embla__slide {
-    @apply flex-shrink-0 w-full flex-grow-0;
+    @apply flex-shrink-0 w-full flex-grow-0 justify-around;
   }
 
   .embla__dot {
