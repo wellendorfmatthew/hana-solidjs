@@ -53,7 +53,7 @@ export function Carousel({ slides }: slides) {
             <img
               src={slide.image}
               alt={slide.alt}
-              class="embla__image rounded-lg h-[60vh] bigPhone:h-[70vh] max-w-[85%] object-cover"
+              class="embla__image rounded-lg h-[60vh] bigPhone:h-[68vh] max-w-[85%] object-cover"
             />
           </div>
         ))}
