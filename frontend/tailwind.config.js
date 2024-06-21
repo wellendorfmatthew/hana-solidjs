@@ -15,6 +15,9 @@ export default {
         "hana-logo": ["Lemon", "serif"],
         "hana-text": ["Grotesque", "sans-serif"],
       },
+      screens: {
+        "bigPhone": '376px',
+      }
     },
     plugins: [],
   },
