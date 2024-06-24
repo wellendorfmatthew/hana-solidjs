@@ -27,6 +27,10 @@
     @apply text-4xl font-hana-text text-white font-semibold;
   }
 
+  .section-subtitle {
+    @apply text-2xl font-hana-text text-white font-light p-2 mt-2;
+  }
+
   .embla {
     @apply overflow-hidden m-4 text-center flex flex-col justify-normal gap-5 max-h-screen;
   }
@@ -75,5 +79,21 @@
 
   .input {
     @apply h-12 text-white rounded-md p-5;
+  }
+
+  .option {
+    @apply text-selection-bg bg-selection-bg bg-opacity-20 border-solid border border-selection-bg py-2 text-center;
+  }
+
+  /* .option-selected {
+    @apply block select-none text-hana-bg rounded-full border-solid border border-selection-bg bg-selection-bg p-2 text-center;
+  } */
+
+  .active-option {
+    @apply bg-selection-bg bg-opacity-90 text-hana-bg
+  }
+
+  .dropdown-menu {
+    @apply absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-hana-bg py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 size-20;
   }
 }
