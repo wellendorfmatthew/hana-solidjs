@@ -1,18 +1,11 @@
-import { createSignal, } from "solid-js";
-
 export default function UserOption(props: any) {
     
-    const [isClicked, setIsClicked] = createSignal(false);
-
-    function toggleClick() { 
-        setIsClicked(!isClicked());
-    }
-    
     return (
-        <li class="relative list-none select-none py-2 pl-1 pr-1 mb-3 option" classList={{"rounded-full": props.rounded, "bg-selection-bg": isClicked(), "bg-opacity-90": isClicked()}} id="listbox-option-0" role="option"  onClick={toggleClick}>
-            <div class="text-center">
-                <span classList={{ "text-hana-bg": isClicked() }}>{props.option}</span>
-            </div>
-        </li>
+        <div class="relative list-none select-none ">
+            <button class="p-2 mb-3 text-center option focus:bg-opacity-100 focus:text-hana-bg" classList={{ "rounded-full": props.rounded }}>
+                <label for={props.name}>{props.option}</label>
+                <input type="radio" name={props.name} id={props.name} value={props.name} class="hidden" required />
+            </button>
+        </div>
     );
 }

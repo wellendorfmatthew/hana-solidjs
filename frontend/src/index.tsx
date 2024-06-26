@@ -10,7 +10,7 @@ import SignUp from './pages/SignUp';
 import Homepage from './pages/Homepage';
 import GenderIdentity from './pages/GenderIdentity';
 import SexualIdentity from './pages/SexualIdentity';
-import RelationshipType from './pages/RealtionshipType';
+import RelationshipType from './pages/RelationshipType';
 import Commitment from './pages/Commitment';
 
 const root = document.getElementById('root');

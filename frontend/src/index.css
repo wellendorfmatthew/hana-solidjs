@@ -82,18 +82,6 @@
   }
 
   .option {
-    @apply text-selection-bg bg-selection-bg bg-opacity-20 border-solid border border-selection-bg py-2 text-center;
-  }
-
-  /* .option-selected {
-    @apply block select-none text-hana-bg rounded-full border-solid border border-selection-bg bg-selection-bg p-2 text-center;
-  } */
-
-  .active-option {
-    @apply bg-selection-bg bg-opacity-90 text-hana-bg
-  }
-
-  .dropdown-menu {
-    @apply absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-hana-bg py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 size-20;
+    @apply text-selection-bg bg-selection-bg bg-opacity-20 border-solid border border-selection-bg py-2 text-center w-full;
   }
 }
