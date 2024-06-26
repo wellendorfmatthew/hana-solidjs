@@ -2,7 +2,13 @@ import UserOption from "../components/UserOption";
 
 
 export default function GenderId() {
+    const menuOpen = document.getElementById("gender-id");
 
+    function toggleMenu() {
+        if (menuOpen !== null) {
+            menuOpen.setAttribute("size", "3")
+        }
+    }
     return (
         
         <form class="section-container">
@@ -26,7 +32,8 @@ export default function GenderId() {
 
             <div class="mt-2">
                 <label for="gender-id" class="section-subtitle block">Non - binary and more</label>
-                <select name="gender-id" id="gender-id" class="option rounded-full focus:outline-none focus:ring-2 focus:ring-selection-bg">
+
+                <select name="gender-id" id="gender-id" class="option rounded-full focus:outline-none focus:ring-2 focus:ring-selection-bg" onClick={toggleMenu}>
                     <option value="">Choose an option</option>
                     <option value="agender"><UserOption name="agender" option="Agender" /></option>
                     <option value="bigender"><UserOption name="bigender" option="Bigender" /></option>
