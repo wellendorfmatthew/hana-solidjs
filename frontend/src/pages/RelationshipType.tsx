@@ -4,7 +4,7 @@ export default function RelationType() {
     return (
         <form class="section-container">
             <p class="section-title text-center mb-3">What kind of relationship are you looking for?</p>
-            <div class="grid w-[12rem] grid-cols-1 p-1 mt-4 overflow-y-auto">
+            <div class="grid w-[12rem] grid-cols-1 p-1 mt-4 overflow-y-auto py-3">
                 <UserOption name="relation-type" id="bigamy" option="Bigamy" rounded={true} />
                 <UserOption name="relation-type" id="casual" option="Casual" rounded={true} />
                 <UserOption name="relation-type" id="monogamy" option="Monogamy" rounded={true} />

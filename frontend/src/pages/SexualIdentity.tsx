@@ -4,7 +4,7 @@ export default function SexualId() {
     return (
         <form class="section-container">
             <p class="section-title mt-5">Your sexual identity</p>
-            <div class="grid w-[12rem] grid-cols-1 p-3 mt-4 overflow-y-auto">
+            <div class="grid w-[12rem] grid-cols-1 py-3 mt-4 overflow-y-auto">
                 <UserOption name="sexual-id" id="allosexual" option="Allosexual" rounded={true} />
                 <UserOption name="sexual-id" id="androsexual" option="Androsexual" rounded={true} />
                 <UserOption name="sexual-id" id="aromantic" option="Aromantic" rounded={true} />

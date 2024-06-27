@@ -1,6 +1,9 @@
 import UserOption from "../components/UserOption";
+import { useNavigate } from "@solidjs/router";
 
 export default function CommitType() {
+    const navigate = useNavigate();
+
     return (
         <form class="section-container">
             <p class="section-title text-center px-4">For how long would you like to commit to a new connection/relationship?</p>
@@ -12,7 +15,7 @@ export default function CommitType() {
                 <UserOption id="friendship" name="commit-type" option="Friendship"/>
                 <UserOption id="other" name="commit-type" option="Other"/>       
             </div>
-            <a href="#"><input type="submit" value="Continue" class="btn-disabled mt-10" /></a>
+            <input type="submit" value="Continue" class="btn-disabled mt-5" onClick={() => navigate("/sexualidentity")} />
         </form>
     );
 }

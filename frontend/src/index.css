@@ -84,4 +84,19 @@
   .option {
     @apply text-selection-bg text-2xl font-hana-text font-normal bg-selection-bg bg-opacity-20 border-solid border border-selection-bg py-2 text-center w-full;
   }
+
+  .select-btn, .options li {
+    @apply flex items-center pl-3 text-selection-bg text-2xl font-hana-text font-normal;
+  }
+
+  .select-btn {
+    @apply justify-center px-1;
+  }
+
+  .content {
+    @apply p-2 mt-2 rounded-2xl;
+  }
+  .options li:hover {
+    @apply bg-selection-bg bg-opacity-30;
+  }
 }
