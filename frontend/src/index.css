@@ -82,6 +82,6 @@
   }
 
   .option {
-    @apply text-selection-bg bg-selection-bg bg-opacity-20 border-solid border border-selection-bg py-2 text-center w-full;
+    @apply text-selection-bg text-2xl font-hana-text font-normal bg-selection-bg bg-opacity-20 border-solid border border-selection-bg py-2 text-center w-full;
   }
 }
