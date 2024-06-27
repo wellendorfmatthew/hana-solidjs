@@ -13,3 +13,7 @@ npm run dev
 * Updated UI to prioritize mobile experience
 * Implemented the home page containing a carousel of app information for first time users
 * Optimized taildwind configuration and css styling 
+# 6/27/24
+* Created backend server using bun and hono
+* Connected backend server to Neon
+* Created the Users table for Postrgres database
