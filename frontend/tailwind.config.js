@@ -4,20 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        "hana-bg": "#14042D",
-        "btn-bg-primary": "#8C5AD9",
-        "btn-bg-secondary": "#D9A059",
-        "input-bg": "#E4D2FA",
-        "btn-bg-disabled": "#9EB1A4",
-        "selection-bg": "#59D977",
+        "dark-purple": "#14042D",
+        "purple-primary": "#8C5AD9",
+        "orange-secondary": "#D9A059",
+        "light-pink": "#E4D2FA",
+        "muted-green": "#9EB1A4",
+        "neon-green": "#59D977",
       },
       fontFamily: {
         "hana-logo": ["Lemon", "serif"],
         "hana-text": ["Grotesque", "sans-serif"],
       },
       screens: {
-        "bigPhone": '376px',
-      }
+        bigPhone: "376px",
+      },
     },
     plugins: [],
   },

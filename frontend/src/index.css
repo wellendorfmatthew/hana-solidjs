@@ -44,33 +44,33 @@
   }
 
   .active {
-    @apply bg-btn-bg-secondary;
+    @apply bg-orange-secondary;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply btn-base bg-btn-bg-primary;
+    @apply btn-base bg-purple-primary;
   }
 
   .btn-secondary {
-    @apply btn-base bg-btn-bg-secondary;
+    @apply btn-base bg-orange-secondary;
   }
 
   .btn-disabled {
-    @apply btn-base bg-btn-bg-disabled;
+    @apply btn-base bg-muted-green;
   }
 
   .hana-title {
-    @apply text-6xl font-hana-logo text-btn-bg-primary;
+    @apply text-6xl font-hana-logo text-purple-primary;
   }
 
   .otp-input {
-    @apply w-[60px] border-none border-b-[3px] border-hana-bg mx-2 text-center text-2xl pointer-events-none cursor-not-allowed rounded-md p-5 first-of-type:cursor-pointer first-of-type:pointer-events-auto;
+    @apply w-[60px] border-none border-b-[3px] border-dark-purple mx-2 text-center text-2xl pointer-events-none cursor-not-allowed rounded-md p-5 first-of-type:cursor-pointer first-of-type:pointer-events-auto;
   }
 
   .section-container {
-    @apply w-full h-full bg-hana-bg flex flex-col items-center justify-center;
+    @apply w-full h-full bg-dark-purple flex flex-col items-center justify-center;
   }
 
   .input {
