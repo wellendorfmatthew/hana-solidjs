@@ -58,7 +58,7 @@
   }
 
   .btn-disabled {
-    @apply btn-base bg-muted-green;
+    @apply btn-base bg-green-muted;
   }
 
   .hana-title {
@@ -66,11 +66,11 @@
   }
 
   .otp-input {
-    @apply w-[60px] border-none border-b-[3px] border-dark-purple mx-2 text-center text-2xl pointer-events-none cursor-not-allowed rounded-md p-5 first-of-type:cursor-pointer first-of-type:pointer-events-auto;
+    @apply w-[60px] border-none border-b-[3px] border-purple-dark mx-2 text-center text-2xl pointer-events-none cursor-not-allowed rounded-md p-5 first-of-type:cursor-pointer first-of-type:pointer-events-auto;
   }
 
   .section-container {
-    @apply w-full h-full bg-dark-purple flex flex-col items-center justify-center;
+    @apply w-full h-full bg-ourple-dark flex flex-col items-center justify-center;
   }
 
   .input {
