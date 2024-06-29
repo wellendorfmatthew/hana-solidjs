@@ -1,4 +1,4 @@
-import { JSX } from "solid-js"
+import { JSX } from "solid-js";
 
 interface optionProps {
     id: string
@@ -11,9 +11,8 @@ export default function UserOption({ id, name, option, rounded }: optionProps): 
     
     return (
         <div class="relative list-none select-none p-2 mb-3 text-center option focus:bg-opacity-100 focus:text-hana-bg focus:font-semibold" classList={{ "rounded-full": rounded }} tabindex={0}>
-                <label for={id}>{option}</label>
-                <input type="radio" name={name} id={id} value={id} required class="hidden" />
-            </div>
-
+            <label for={id}>{option}</label>
+            <input type="radio" name={name} id={id} value={id} class="hidden" />
+        </div>
     );
 }
