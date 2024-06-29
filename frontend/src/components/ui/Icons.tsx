@@ -10,7 +10,7 @@ export function ArrowRight() {
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="lucide lucide-move-right stroke-btn-bg-secondary"
+        class="lucide lucide-move-right stroke-orange-secondary"
       >
         <path d="M18 8L22 12L18 16" />
         <path d="M2 12H22" />
@@ -30,7 +30,7 @@ export function ArrowLeft() {
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="lucide lucide-move-left stroke-btn-bg-secondary"
+      class="lucide lucide-move-left stroke-orange-secondary"
     >
       <path d="M6 8L2 12L6 16" />
       <path d="M2 12H22" />

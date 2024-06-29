@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.13.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "embla-carousel-solid": "^8.1.5",
-    "solid-js": "^1.8.15"
+    "solid-js": "^1.8.15",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.11",
