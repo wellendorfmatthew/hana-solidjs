@@ -70,7 +70,7 @@
   }
 
   .section-container {
-    @apply w-full h-full bg-ourple-dark flex flex-col items-center justify-center;
+    @apply w-full h-full bg-purple-dark flex flex-col items-center justify-center;
   }
 
   .input {
