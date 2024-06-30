@@ -32,14 +32,20 @@ export default function Pictures() {
             </div>
             <div class="grid grid-cols-2 gap-4">
                 {pictureList().map((pic, index) => (
-                        <div key={index} class="relative">
+                        <div class="relative">
+                            <label 
+                            for={"picture" + index}
+                            class="cursor-pointer"
+                            >
+                                <img src={pic} class="w-[60px] h-[60px]" />
+                            </label>
                             <input 
                                 type="file" 
-                                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" 
+                                class="hidden" 
                                 accept="image/*" 
+                                id={"picture" + index}
                                 onchange={handleImage(index)} 
                             />
-                            <img src={pic} alt="" class="w-[60px] h-[60px] object-cover pointer-events-none" />
                         </div>
                     ))}
             </div>
