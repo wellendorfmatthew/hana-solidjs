@@ -9,6 +9,7 @@ import OTP from './pages/OTP';
 import SignUp from './pages/SignUp';
 import Homepage from './pages/Homepage';
 import { Preview } from './pages/Preview';
+import Pictures from './pages/Pictures';
 
 const root = document.getElementById('root');
 
@@ -21,6 +22,7 @@ render(
             <Route path={"/sign-up"} component={SignUp} />
             <Route path={"/homepage"} component={Homepage} />
             <Route path={"/preview"} component={Preview} />
+            <Route path={"/pictures"} component={Pictures} />
         </Router>
     ),
      root!
