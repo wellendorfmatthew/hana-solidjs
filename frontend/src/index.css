@@ -82,7 +82,7 @@
   }
 
   .option {
-    @apply text-selection-bg text-2xl font-hana-text font-normal bg-selection-bg bg-opacity-20 border-solid border border-selection-bg py-2 text-center w-full;
+    @apply text-selection-bg text-2xl font-hana-text font-normal bg-selection-bg/20 border-solid border border-selection-bg py-2 text-center w-full;
   }
 
   .select-btn,
@@ -99,6 +99,14 @@
   }
   
   .options li:hover {
-    @apply bg-selection-bg bg-opacity-30;
+    @apply bg-selection-bg/30;
+  }
+
+  .menu::-webkit-scrollbar {
+    @apply w-3  bg-selection-bg/30 rounded-2xl;
+  }
+
+  .menu::-webkit-scrollbar-thumb {
+    @apply bg-hana-bg/40 rounded-full h-1/6;
   }
 }
