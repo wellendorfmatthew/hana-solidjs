@@ -48,9 +48,18 @@ export function TextInput({
         placeholder={placeholderText}
       />
       {!disabled && (
-        <span class="text-red-500 text-right w-[30%] m-0 text-xs hidden peer-invalid/textinput:block">
-          Please enter a valid {type}
-        </span>
+        <>
+          {required && (
+            <span class="text-red-500 text-right w-[30%] m-0 text-xs hidden peer-invalid/textarea:block">
+              This field is required
+            </span>
+          )}
+          {!required && (
+            <span class="text-red-500 text-right w-[30%] m-0 text-xs hidden peer-invalid/textinput:block">
+              Please enter a valid {type}
+            </span>
+          )}
+        </>
       )}
     </>
   );

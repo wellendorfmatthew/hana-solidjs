@@ -58,6 +58,11 @@ export function TextArea({
           {count()} / 200
         </span>
       )}
+      {!disabled && required && (
+        <span class="text-red-500 text-right w-[30%] m-0 text-xs hidden peer-invalid/textarea:block">
+          This field is required
+        </span>
+      )}
     </>
   );
 }
