@@ -33,18 +33,23 @@ export function TextInput({
   autofocus,
 }: textInputProps): JSX.Element {
   return (
-    <input
-      autofocus={autofocus}
-      disabled={disabled}
-      required={required}
-      type={type}
-      class={cn(
-        "h-10 w-[30%] rounded-md bg-input-bg px-3 py-2 text-sm ring-offset-background  placeholder:text-black/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-        className
-      )}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholderText}
-    />
+    <>
+      <input
+        autofocus={autofocus}
+        disabled={disabled}
+        required={required}
+        type={type}
+        class={cn(
+          "peer/textinput h-10 w-[30%] rounded-md bg-input-bg px-3 py-2 text-sm ring-offset-background  placeholder:text-black/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          className
+        )}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholderText}
+      />
+      {!disabled &&
+        <span class="text-red-500 text-right w-[30%] m-0 text-xs hidden peer-invalid/textinput:block">Please enter a valid {type}</span>
+      }
+    </>
   );
 }
