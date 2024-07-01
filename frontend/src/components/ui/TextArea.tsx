@@ -46,7 +46,7 @@ export function TextArea({
         disabled={disabled}
         required={required}
         class={cn(
-          "peer/textarea h-32 w-[30%] rounded-md bg-input-bg px-3 py-2 text-sm ring-offset-background  placeholder:text-black/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          "peer/textarea h-32 w-[30%] rounded-md bg-pink-light px-3 py-2 text-sm ring-offset-background  placeholder:text-black/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         value={value}
