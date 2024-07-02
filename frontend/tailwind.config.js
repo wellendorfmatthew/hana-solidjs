@@ -10,6 +10,7 @@ export default {
         "pink-light": "#E4D2FA",
         "green-muted": "#9EB1A4",
         "green-neon": "#59D977",
+        "interest-dark": "#221639",
       },
       fontFamily: {
         "hana-logo": ["Lemon", "serif"],

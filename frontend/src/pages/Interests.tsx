@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js";
+import { Setter, Signal, createSignal } from "solid-js";
 import { useNavigate } from '@solidjs/router';
 
 export default function Interests() {
@@ -12,7 +12,17 @@ export default function Interests() {
                            "Karaoke", "Rap", "Hip Hop", "Rock", "Pop", "Country", "Classical", "EDM", "Kpop", "Jpop", "Vtubers",
                            "Hiking", "Beaches", "Camping", "TV", "Netflix", "Youtube", "Twitch", "Manga", "Drag"
                           ];
-    const [userInterests, setUserInterests] = createSignal([]);
+    const [userInterests, setUserInterests] = createSignal<string[]>([]);
+
+    const handleInterest = (interest : string) => {
+        setUserInterests((prev) => {
+            if (prev.includes(interest)) {
+                return prev.filter((i) => i !== interest);
+            }
+
+            return [...prev, interest];
+        })
+    }
 
     return (
         <div class="section-container gap-32">
@@ -21,7 +31,12 @@ export default function Interests() {
                 {
                     interestsList.map((interest, index) => (
                         <button 
-                            class="border-2 rounded-full border-green-500 flex justify-center items-center bg-green-950 text-green-500 bg-opacity-10 px-6 py-2"
+                            class={`border-2 rounded-full flex justify-center items-center px-6 py-2
+                                ${userInterests().includes(interest)
+                                    ? "bg-green-neon border-green-neon text-interest-dark"
+                                    : "bg-interest-dark border-green-neon  text-green-300"
+                                }`}
+                            onclick={() => handleInterest(interest)}
                         >
                             {interest}
                         </button>
