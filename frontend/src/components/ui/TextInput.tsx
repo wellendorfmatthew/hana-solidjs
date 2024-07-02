@@ -6,7 +6,7 @@ interface textInputProps {
   value?: string;
   onChange?: (e: Event & { currentTarget: HTMLInputElement }) => void;
   type?: string;
-  className?: string;
+  class?: string;
   disabled?: boolean;
   required?: boolean;
   autofocus?: boolean;
@@ -27,7 +27,7 @@ export function TextInput({
   value = "",
   onChange,
   type = "text",
-  className,
+  class: classProp,
   disabled,
   required,
   autofocus,
@@ -41,7 +41,7 @@ export function TextInput({
         type={type}
         class={cn(
           "peer/textinput h-10 w-[30%] rounded-md bg-pink-light px-3 py-2 text-sm ring-offset-background  placeholder:text-black/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-          className
+          classProp
         )}
         value={value}
         onChange={onChange}
