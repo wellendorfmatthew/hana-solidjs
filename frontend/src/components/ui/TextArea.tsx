@@ -1,4 +1,4 @@
-import { JSX } from "solid-js";
+import { JSX, createSignal } from "solid-js";
 import { cn } from "../../lib/utils";
 
 interface textInputProps {
@@ -30,18 +30,39 @@ export function TextArea({
   required,
   autofocus,
 }: textInputProps): JSX.Element {
+  const [count, setCount] = createSignal(0);
+
+  const handleInput = (e: Event & { currentTarget: HTMLTextAreaElement }) => {
+    console.log(e.currentTarget.value.length);
+    setCount(e.currentTarget.value.length);
+    if (onChange) onChange(e);
+  };
+
   return (
-    <textarea
-      autofocus={autofocus}
-      disabled={disabled}
-      required={required}
-      class={cn(
-        "h-32 w-[30%] rounded-md bg-input-bg px-3 py-2 text-sm ring-offset-background  placeholder:text-black/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-        className
+    <>
+      <textarea
+        maxLength={200}
+        autofocus={autofocus}
+        disabled={disabled}
+        required={required}
+        class={cn(
+          "peer/textarea h-32 w-[30%] rounded-md bg-pink-light px-3 py-2 text-sm ring-offset-background  placeholder:text-black/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          className
+        )}
+        value={value}
+        onInput={handleInput}
+        placeholder={placeholderText}
+      />
+      {!disabled && (
+        <span class="text-white text-xs text-right w-[30%] peer-invalid/textarea:text-red-500">
+          {count()} / 200
+        </span>
       )}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholderText}
-    />
+      {!disabled && required && (
+        <span class="text-red-500 text-right w-[30%] m-0 text-xs hidden peer-invalid/textarea:block">
+          This field is required
+        </span>
+      )}
+    </>
   );
 }
