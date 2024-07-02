@@ -6,7 +6,7 @@ interface textInputProps {
   value?: string;
   onChange?: (e: Event & { currentTarget: HTMLTextAreaElement }) => void;
   type?: string;
-  className?: string;
+  class?: string;
   disabled?: boolean;
   required?: boolean;
   autofocus?: boolean;
@@ -25,7 +25,7 @@ export function TextArea({
   placeholderText,
   value = "",
   onChange,
-  className,
+  class: classProp,
   disabled,
   required,
   autofocus,
@@ -47,7 +47,7 @@ export function TextArea({
         required={required}
         class={cn(
           "peer/textarea h-32 w-[30%] rounded-md bg-pink-light px-3 py-2 text-sm ring-offset-background  placeholder:text-black/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-          className
+          classProp
         )}
         value={value}
         onInput={handleInput}
