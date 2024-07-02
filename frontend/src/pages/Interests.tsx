@@ -27,7 +27,7 @@ export default function Interests() {
     return (
         <div class="section-container gap-32">
             <p class="section-title">What are your interests?</p>
-            <div class="flex justify-center flex-wrap gap-4 h-[200px] w-[320px] overflow-auto">
+            <div class="flex justify-center flex-wrap gap-4 h-1/3 w-5/6 overflow-auto">
                 {
                     interestsList.map((interest, index) => (
                         <button 

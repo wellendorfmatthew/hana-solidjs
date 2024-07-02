@@ -18,12 +18,14 @@ export default function AboutMe() {
                 <p class="section-title">Provide a description</p>
                 <p class="section-title">about yourself</p>
             </div>
-            <TextArea
-                placeholderText="Write a short description about yourself at least 200 characters in length"
-                value={description()}
-                onChange={(handleDescription)}
-                className="w-2/3 h-1/3 bg-pink-light"
-            />
+            <div class="flex justify-center items-end flex-col w-2/3 h-1/3 gap-2">
+                <TextArea
+                    placeholderText="Write a short description about yourself at least 200 characters in length"
+                    value={description()}
+                    onChange={(handleDescription)}
+                    className="w-full h-full bg-pink-light"
+                />
+            </div>
             <button class='btn-primary' onClick={() => navigate("/otp")}>
                 Continue
             </button>
