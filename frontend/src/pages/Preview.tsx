@@ -1,4 +1,5 @@
 import { Button } from "../components/ui/Button";
+import { IosStylePicker } from "../components/ui/IosStylePicker";
 import { TextArea } from "../components/ui/TextArea";
 import { TextInput } from "../components/ui/TextInput";
 
@@ -22,6 +23,7 @@ export function Preview() {
               <Button children="Secondary large" variant="secondary" size="large" />
               <Button children="Disabled" disabled />
       </div>
+      <IosStylePicker />
     </div>
   );
 }

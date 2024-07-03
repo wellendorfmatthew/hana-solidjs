@@ -8,9 +8,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-btn-bg-primary hover:bg-btn-bg-primary/60 focus:ring-btn-bg-primary",
+          "bg-purple-primary hover:bg-purple-primary/60 focus:ring-purple-primary",
         secondary:
-          "bg-btn-bg-secondary hover:bg-btn-bg-secondary/60 focus:ring-btn-bg-secondary",
+          "bg-orange-secondary hover:bg-orange-secondary/60 focus:ring-orange-secondary",
       },
       size: {
         default: "px-4 py-2 text-sm",
@@ -54,7 +54,7 @@ export function Button({
   onClick,
   children,
   type = "button",
-  className,
+  class: classProp,
   variant,
   size,
 }: buttonProps): JSX.Element {
@@ -64,7 +64,11 @@ export function Button({
       autofocus={autofocus}
       onClick={onClick}
       type={type}
-      class={cn(buttonVariants({ variant, size, className }), disabled ? "cursor-not-allowed bg-btn-bg-disabled hover:bg-btn-bg-disabled" : "")}
+      class={cn(
+        buttonVariants({ variant, size }),
+        classProp,
+        disabled ? "cursor-not-allowed bg-green-muted hover:bg-green-muted" : ""
+      )}
     >
       {children}
     </button>
