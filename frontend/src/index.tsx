@@ -9,10 +9,10 @@ import OTP from './pages/OTP';
 import SignUp from './pages/SignUp';
 import Homepage from './pages/Homepage';
 import { Preview } from './pages/Preview';
-import { Gender } from './pages/Gender';
-import { SexualOrient } from './pages/SexualOrientation';
-import { RelationType } from './pages/RelationshipType';
-import { Commitment } from './pages/Commitment';
+import Gender from './pages/Gender';
+import SexualOrient from './pages/SexualOrientation';
+import RelationType from './pages/RelationshipType';
+import Commitment from './pages/Commitment';
 
 const root = document.getElementById('root');
 
