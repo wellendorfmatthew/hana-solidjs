@@ -2,39 +2,6 @@ import { Dropdown } from "../components/Dropdown";
 import { useNavigate } from "@solidjs/router";
 import { userOptions } from "../components/UserOptions";
 
-// const genderOptions = [
-//     {
-//         "id": "woman",
-//         "name": "gender",
-//         "value": "Woman"
-//     },
-//     {
-//         "id": "man",
-//         "name": "gender",
-//         "value": "Man"
-//     },
-//     {
-//         "id": "genderqueer",
-//         "name": "gender",
-//         "value": "Genderqueer"
-//     },
-//     {
-//         "id": "noncomforming",
-//         "name": "gender",
-//         "value": "Non - comforming"
-//     },
-//     {
-//         "id": "questioning",
-//         "name": "gender",
-//         "value": "Questioning"
-//     },
-//     {
-//         "id": "other",
-//         "name": "gender",
-//         "value": "Other"
-//     }
-// ]
-
 export default function Gender() {
     const navigate = useNavigate();
 

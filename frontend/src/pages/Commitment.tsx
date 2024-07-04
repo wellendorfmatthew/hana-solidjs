@@ -1,34 +1,6 @@
 import { RadioButton } from "../components/ui/RadioButton";
 import { userOptions } from "../components/UserOptions";
 
-// const commitment = [
-//     {
-//         "id": "longterm",
-//         "name": "commit-type",
-//         "value": "Long term"
-//     },
-//     {
-//         "id": "shortterm",
-//         "name": "commit-type",
-//         "value": "Short term"
-//     },
-//     {
-//         "id": "hookup",
-//         "name": "commit-type",
-//         "value": "Hookup"
-//     },
-//     {
-//         "id": "friendship",
-//         "name": "commit-type",
-//         "value": "Friendship"
-//     },
-//     {
-//         "id": "other",
-//         "name": "commit-type",
-//         "value": "Other"
-//     }
-// ]
-
 export default function Commitment() {
     return (
         <form class="section-container gap-20">
