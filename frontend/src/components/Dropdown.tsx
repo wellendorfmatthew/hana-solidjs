@@ -1,8 +1,7 @@
-import { createEffect, createSignal } from "solid-js";
+import { createEffect, createSignal, onCleanup } from "solid-js";
 
 let menuOuterRef: HTMLDivElement;
 let menuRef: HTMLDivElement;
-let windowRef: Document;
 
 interface optionInfo {
     name: string;
@@ -21,12 +20,25 @@ export function Dropdown({ menuOption }: menuProps) {
     const [selected, setSelected] = createSignal("")
 
     createEffect(() => {
-        windowRef.onclick ? (() => { menuRef.hidden = setMenuIsOpen(true) }) : null;
-    })
+        const closeDropdown = (e : any) => {
+            if (!menuOuterRef.contains(e.target)) {
+                menuRef.className = 'hidden';
+            }
+            else if (menuOuterRef.contains(e.target) && menuRef.className === 'absolute menu top-16 mt-1 z-10 size-34 w-[13rem] p-0') {
+                menuRef.className = 'hidden';
+            }
+            else {
+                menuRef.className = 'absolute menu top-16 mt-1 z-10 size-34 w-[13rem] p-0';
+            }
+        }
 
+        document.body.addEventListener('click', closeDropdown);
+        onCleanup(() => document.body.removeEventListener('click', closeDropdown));
+    })
+   
     return (
         <>
-            <div ref={menuOuterRef} class="relative trigger menu bg-[url('assets/images/caretDown.svg')] bg-no-repeat bg-[left_11rem_top_57%] bg-[length:1rem_1rem] hover:cursor-pointer" onClick={(prev) => setMenuIsOpen(!prev)}> 
+            <div ref={menuOuterRef} id="dropdown" class="relative trigger menu bg-[url('assets/images/caretDown.svg')] bg-no-repeat bg-[left_11rem_top_57%] bg-[length:1rem_1rem] hover:cursor-pointer" > 
                 <span class="px-3 font-hana-text text-green-neon font-medium text-2xl">{selected() ? selected() : "Choose an option"}</span>
             </div>
             <div ref={menuRef} class="absolute menu top-16 mt-1 z-10 size-34 w-[13rem] p-0" classList={{ "hidden": menuIsOpen() }}>
@@ -46,7 +58,6 @@ export function Dropdown({ menuOption }: menuProps) {
                     })}
                 </ul>
             </div>
-        </>
-        
+        </>      
     )
 }
