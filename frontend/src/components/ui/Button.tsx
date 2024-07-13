@@ -56,7 +56,7 @@ export function Button({
   onClick,
   children,
   type = "button",
-  className,
+  class: classProp,
   variant,
   size,
 }: buttonProps): JSX.Element {
@@ -67,7 +67,8 @@ export function Button({
       onClick={onClick}
       type={type}
       class={cn(
-        buttonVariants({ variant, size, className }),
+        buttonVariants({ variant, size }),
+        classProp,
         disabled ? "cursor-not-allowed bg-green-muted hover:bg-green-muted" : ""
       )}
     >
