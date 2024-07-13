@@ -29,7 +29,7 @@ export default function Interests() {
             <p class="section-title">What are your interests?</p>
             <div class="flex justify-center flex-wrap gap-4 h-1/3 w-5/6 overflow-auto">
                 {
-                    interestsList.map((interest, index) => (
+                    interestsList.map((interest, index) => ( // Might end up making this it's own component later on, depends on if another page needs similar functionality
                         <button 
                             class={`border-2 rounded-full flex justify-center items-center px-6 py-2
                                 ${userInterests().includes(interest)

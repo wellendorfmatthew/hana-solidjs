@@ -23,7 +23,7 @@ export default function AboutMe() {
                     placeholderText="Write a short description about yourself at least 200 characters in length"
                     value={description()}
                     onChange={(handleDescription)}
-                    className="w-full h-full bg-pink-light"
+                    class="w-full h-full bg-pink-light"
                 />
             </div>
             <button class='btn-primary' onClick={() => navigate("/otp")}>
