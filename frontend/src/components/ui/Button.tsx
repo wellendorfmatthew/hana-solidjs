@@ -11,6 +11,8 @@ const buttonVariants = cva(
           "bg-purple-primary hover:bg-purple-primary/60 focus:ring-purple-primary",
         secondary:
           "bg-orange-secondary hover:bg-orange-secondary/60 focus:ring-orange-secondary",
+        tertiary:
+          "bg-interest-dark border-green-neon text-green-300 hover:bg-interest-dark/60 focus:ring-interest-dark"
       },
       size: {
         default: "px-4 py-2 text-sm",

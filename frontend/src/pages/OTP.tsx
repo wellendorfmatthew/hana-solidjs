@@ -87,7 +87,7 @@ export default function OTP() {
         />
       </div>
       <button
-        onClick={() => navigate("/sign-up")}
+        onClick={() => navigate("/")} // TODO: When the Personal Info page is made make sure to make this the route
         class="btn-primary"
       >
         Continue
